@@ -20,11 +20,22 @@ const findFrequency = function(array) {
 const isPalindrome = function(str) {
     var reversedStr = str.toLowerCase().split('').reverse().join('') //=
     return str === reversedStr ? true : false; //=
-}};
-
-const largestPair = function(array) {
-  // your code here - don't forget to return a number!
 };
+
+
+
+const largestPair = function(array){
+    let product = 0;
+    let newArr = []
+
+    for (let i = 0; i < array.length - 1; i++){
+        product = array[i] * array[i + 1]  
+        newArr.push(product) 
+    }
+    return Math.max(...newArr) 
+};
+
+
 
 const removeParenth = function(str) {
   // your code here - don't forget to return a string!
