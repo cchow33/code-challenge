@@ -20,8 +20,8 @@ const findFrequency = function(array) {
 
 // Problem 3
 const isPalindrome = function(str) {
-    var reversedStr = str.toLowerCase().split('').reverse().join('') //=
-    return str === reversedStr ? true : false; //=
+    var reversedStr = str.toLowerCase().split('').reverse().join('') 
+    return str === reversedStr ? true : false; 
 };
 
 
@@ -45,7 +45,7 @@ const removeParenth = function(str) {
 
 // Problem 6
 const scoreScrabble = function(str) {
-  const scoreScrabble = function(str) {
+  
     const points = {
         a: 1,
         e: 1,
