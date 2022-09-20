@@ -40,7 +40,11 @@ const largestPair = function(array){
 
 // Problem 5
 const removeParenth = function(str) {
-  // your code here - don't forget to return a string!
+  const removeParenth = function(str) {
+    var index1 = str.indexOf('(') 
+    var index2 = str.indexOf(')') 
+    var newStr = str.substring(0, index1) + str.substring(index2 + 1) 
+    return newStr
 };
 
 // Problem 6
