@@ -1,12 +1,9 @@
 const findSum = function(array) {
     let sum = 0;
-    let average = 0;
-
-    for (const i of array){
-        sum += i; 
-        average = sum / array.length;
+    for (let i = 0; i < array.length; i++){
+        sum += array[i];
     }
-    return average 
+    return sum;
 };
 
 
