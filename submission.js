@@ -1,4 +1,3 @@
-// Problem 1
 const findSum = function(array) {
     let sum = 0;
     let average = 0;
@@ -11,21 +10,30 @@ const findSum = function(array) {
 };
 
 
-// Problem 2
 const findFrequency = function(array) {
-  // your code here - don't forget to return an object!
+    let result = {} 
+    
+    array.forEach(function(item){
+        if (result.hasOwnProperty(item)){
+            result[item] += 1;
+        } else {
+            result[item] = 1;
+        }
+    })
+    console.log(result)
+
+    for (let item in result){
+        console.log(result[item])
+    }
 };
 
 
-
-// Problem 3
 const isPalindrome = function(str) {
     var reversedStr = str.toLowerCase().split('').reverse().join('') 
     return str === reversedStr ? true : false; 
 };
 
 
-// Problem 4
 const largestPair = function(array){
     let product = 0;
     let newArr = []
@@ -38,7 +46,7 @@ const largestPair = function(array){
 };
 
 
-// Problem 5
+
 const removeParenth = function(str) {
   const removeParenth = function(str) {
     var index1 = str.indexOf('(') 
@@ -47,9 +55,8 @@ const removeParenth = function(str) {
     return newStr
 };
 
-// Problem 6
+
 const scoreScrabble = function(str) {
-  
     const points = {
         a: 1,
         e: 1,
