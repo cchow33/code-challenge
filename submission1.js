@@ -8,26 +8,32 @@ const findSum = function(array) {
 
 
 const findFrequency = function(array) {
-    let count = {}
-    
-    array.forEach(function(item){
-        if (count.hasOwnProperty(item)){
-            count[item] += 1;
+    const count = {};
+    const sorted = [];
+
+    array.forEach((letter) => {
+        if (count[letter]) {
+            count[letter]++;
         } else {
-            count[item] = 1;
+            count[letter] = 1;
         }
-    })
-    console.log(count)
+    });
 
-    for (let item in count){
-        console.log(count[item])
-        
+    console.log(count);
+    for (key in count) {
+        sorted.push([key, count[key]])
     }
+    console.log(sorted)
+    sorted.sort((a,b) => {
+        return a[1] - b[1]; //=
+    })
+    console.log(sorted)
 
-    return count;
-
-} 
-
+    let least = sorted[0][0];
+    let most = sorted[sorted.length - 1][0];
+    
+    return {most: most , least: least};
+};
 
 
 const isPalindrome = function(str) {
