@@ -19,21 +19,19 @@ const findFrequency = function(array) {
         }
     });
 
-    console.log(count);
     for (key in count) {
         sorted.push([key, count[key]])
     }
-    console.log(sorted)
     sorted.sort((a,b) => {
-        return a[1] - b[1]; //=
+        return a[1] - b[1];
     })
-    console.log(sorted)
-
+ 
     let least = sorted[0][0];
     let most = sorted[sorted.length - 1][0];
     
     return {most: most , least: least};
 };
+
 
 
 const isPalindrome = function(str) {
