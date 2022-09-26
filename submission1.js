@@ -54,7 +54,6 @@ const largestPair = function(array){
 
 
 const removeParenth = function(str) {
-  const removeParenth = function(str) {
     var index1 = str.indexOf('(') 
     var index2 = str.indexOf(')') 
     var newStr = str.substring(0, index1) + str.substring(index2 + 1) 
